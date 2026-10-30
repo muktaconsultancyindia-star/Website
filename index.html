@@ -149,6 +149,11 @@ nav a:hover{color:var(--teal)}
 .post strong{font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink)}
 .post span:not(.pill){color:var(--muted);font-size:15px}
 .post-soon{border-style:dashed}
+.post-link{text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.post-link:hover{border-color:var(--teal);transform:translateY(-2px)}
+.post-link strong{font-family:var(--body)!important;font-weight:700!important;font-size:20px!important;line-height:1.35}
+.post-en{font-style:normal;font-family:var(--display);font-size:17px;color:var(--muted)}
+.post .read{color:var(--teal)!important;font-weight:700;font-size:15px}
 @media (max-width:900px){.blog-grid{grid-template-columns:1fr}}
 .gal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
 .gal-grid figure{margin:0;aspect-ratio:4/3;max-width:100%;border-radius:14px;overflow:hidden}
@@ -434,10 +439,17 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
       <h2>Notes from the field</h2>
       <p class="lede">Practical articles on livelihoods, livestock and agri enterprises, DPRs and project management, written from our work on the ground. A new article every month.</p>
       <div class="blog-grid" id="blog-list">
+        <a class="post post-link" href="blog/project-ends-enterprise-continues.html">
+          <span class="pill">31 Oct 2026 · हिंदी | English</span>
+          <strong>प्रोजेक्ट खत्म हो जाए, पर उद्यम चलता रहे</strong>
+          <em class="post-en">When the project ends, the enterprise should not</em>
+          <span>Why rural enterprises stall when funding ends, and how we build ones that last: feasibility first, ownership, Human Lab training, a Plan B and a gradual exit.</span>
+          <span class="read">पूरा लेख पढ़ें / Read article →</span>
+        </a>
         <article class="post post-soon">
-          <span class="pill">First article coming soon</span>
-          <strong>Our first article is on its way</strong>
-          <span>Check back soon for field notes and practical guides.</span>
+          <span class="pill">Next article</span>
+          <strong>More field notes coming soon</strong>
+          <span>A new article every month.</span>
         </article>
       </div>
     </div>
