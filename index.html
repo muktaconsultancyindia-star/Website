@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mukta Consultancy</title>
+<meta name="description" content="Mukta Consultancy: project, business and management consultancy for SHG livelihoods, livestock and agri enterprises, DPRs, training and market linkages. Field-first, end-to-end support from Konari, Rajnandgaon, Chhattisgarh.">
+<meta name="theme-color" content="#142B4A">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mukta Consultancy | People. Knowledge. Impact.">
+<meta property="og:description" content="Project, business and management consultancy: from the first step to a steady village income.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: logo-led header → field-first hero with the MUKTA acronym as a "ledger" → services as four work streams → real sequence of how a project runs → people we work with → name story → contact sheet with registration details */
+:root{
+  --navy:#142B4A; --teal:#159A9C; --gold:#C9A46A; --gold-soft:#E8D3AE;
+  --bg:#FBFAF7; --surface:#FFFFFF; --ink:#142B4A; --muted:#55627A; --line:#E6E1D6; --band:#142B4A; --band-ink:#F4EFE5; --chip:#F2EEE5;
+  --display:"Marcellus","Cormorant Garamond",Georgia,serif;
+  --body:"Mukta","Noto Sans Devanagari","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1C30; --surface:#13253D; --ink:#EEF2F7; --muted:#A9B6C8; --line:#24395A; --band:#0A1626; --band-ink:#EEF2F7; --chip:#1A2F4C; --teal:#3FC1C2; --gold:#D9B67E; --gold-soft:#5A4A2E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1C30; --surface:#13253D; --ink:#EEF2F7; --muted:#A9B6C8; --line:#24395A; --band:#0A1626; --band-ink:#EEF2F7; --chip:#1A2F4C; --teal:#3FC1C2; --gold:#D9B67E; --gold-soft:#5A4A2E; color-scheme:dark}
+[hidden]{display:none!important}
+img{max-width:100%}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--teal)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--ink);text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.lede{color:var(--muted);max-width:62ch}
+.promise{margin:14px 0 0;font-family:var(--display);font-size:22px;color:var(--ink);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.promise span{font-family:var(--body);font-weight:700;font-size:19px;color:var(--gold)}
+.hero .eyebrow{line-height:1.7}
+section{padding-block:72px}
+section+section{border-top:1px solid var(--line)}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand{display:flex;align-items:center;background:#fff;border-radius:10px;padding:6px 10px}
+.brand img{height:44px;width:auto;display:block}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--teal)}
+@media (max-width:720px){nav{display:none}}
+
+/* hero */
+.hero{padding-block:64px 72px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hi-line{font-size:20px;font-weight:600;color:var(--muted);margin-top:14px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:1.5px solid var(--navy);cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+:root[data-theme="dark"] .btn.primary{background:var(--teal);border-color:var(--teal);color:#06202A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{background:var(--teal);border-color:var(--teal);color:#06202A}}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion: reduce){.btn:hover{transform:none}}
+
+/* acronym ledger */
+.ledger{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 26px 18px}
+.ledger-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:6px}
+.ledger-head span{font-family:var(--display);font-size:26px;letter-spacing:.14em}
+.ledger-head small{color:var(--muted);font-size:13px}
+.ledger ol{list-style:none;margin:0;padding:0}
+.ledger li{display:grid;grid-template-columns:52px 1fr;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line)}
+.ledger li:last-child{border-bottom:0}
+.ledger b{font-family:var(--display);font-size:34px;color:var(--teal);line-height:1}
+.ledger li span{font-size:19px;font-weight:600}
+.ledger li i{display:block;font-style:normal;color:var(--muted);font-size:14px;font-weight:400}
+.tagline{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.32em;color:var(--gold);text-align:center}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.journey{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:4px;padding:12px;border-radius:12px;background:var(--chip)}
+.journey span{font-size:13.5px;font-weight:700;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.journey i{font-style:normal;color:var(--gold);font-weight:800}
+.journey-hi{font-size:13.5px;color:var(--muted);font-weight:600;margin-top:-4px}
+.field-note{margin:18px 0 0;max-width:70ch;padding:16px 18px;border-left:3px solid var(--gold);background:var(--chip);border-radius:0 12px 12px 0;color:var(--ink)}
+.field-note span{display:block;margin-top:4px;color:var(--muted);font-weight:600}
+.act{display:inline-flex;align-items:center;justify-content:center;min-width:64px;padding:6px 14px;border-radius:999px;background:var(--gold);color:#142B4A;font-weight:800;font-size:14px;text-decoration:none}
+.btn.wa svg,.wa-btn svg{flex:none}
+.contact .reg{margin-top:26px}
+.enq{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:start;min-width:0}
+.enq h3{color:var(--band-ink);font-size:26px}
+.enq-sub{margin:-8px 0 0;color:rgba(255,255,255,.7);font-size:15px}
+.enq label{display:grid;gap:6px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);min-width:0}
+.enq input,.enq textarea{font:inherit;font-size:16px;text-transform:none;letter-spacing:0;font-weight:400;color:#142B4A;background:#FBFAF7;border:1px solid transparent;border-radius:10px;padding:10px 12px;width:100%}
+.enq input:focus,.enq textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.enq textarea{resize:vertical}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.enq-actions{display:flex;flex-wrap:wrap;gap:10px}
+.wa-btn{background:#25D366;border-color:#25D366;color:#0B2A17}
+.ghost-light{background:transparent;color:var(--band-ink);border-color:rgba(255,255,255,.35)}
+.enq-err{margin:0;color:#FFB4A8;font-size:14.5px}
+.enq-ok{margin:0;color:#B7F0C8;font-size:14.5px}
+@media (max-width:620px){.f2{grid-template-columns:1fr}}
+.vm{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:20px}
+.vm-block{display:grid;gap:8px}
+.vm-block+.vm-block{border-top:1px solid var(--line);padding-top:18px}
+.vm-label{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.vm-text{margin:0;font-family:var(--display);font-size:24px;line-height:1.3;color:var(--ink)}
+.vm-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.vm-list li{padding-left:20px;position:relative}
+.vm-list li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.ledger-about{margin-top:22px}
+.social{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.social small{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.soc-row{display:flex;gap:10px}
+.soc{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:var(--band-ink);text-decoration:none}
+.soc:hover{background:var(--gold);color:#142B4A;border-color:var(--gold)}
+.wrap.story{align-items:stretch}
+.wrap.story .pearl{align-items:center;height:100%}
+.pair-box .ledger-head{flex-direction:column;align-items:flex-start;gap:2px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.pair-box{display:flex;flex-direction:column}
+.pair-box .ledger-head span{font-size:clamp(16px,2vw,22px)}
+.tag-list{display:flex;flex-direction:column;justify-content:space-around;flex:1}
+.tag-list li{padding:14px 0;grid-template-columns:1fr}
+@media (max-width:900px){.pair{grid-template-columns:1fr}}
+.soon-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.soon{border:1.5px dashed var(--line);border-radius:16px;padding:22px;display:grid;gap:8px;align-content:start;background:var(--surface)}
+.soon strong{font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink)}
+.soon span:not(.pill){color:var(--muted);font-size:15px}
+.pill{justify-self:start;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--chip);border-radius:999px;padding:3px 10px}
+.quote-empty{margin-top:26px;max-width:760px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 30px;position:relative}
+.qmark{font-family:var(--display);font-size:72px;line-height:.6;color:var(--gold);height:30px}
+.quote-empty p{margin:10px 0 0;font-family:var(--display);font-size:22px;line-height:1.4;color:var(--ink)}
+.quote-empty .qsub{font-family:var(--body);font-size:15.5px;color:var(--muted)}
+@media (max-width:900px){.soon-grid{grid-template-columns:1fr}}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:8px;align-content:start}
+.post strong{font-family:var(--display);font-weight:400;font-size:21px;color:var(--ink)}
+.post span:not(.pill){color:var(--muted);font-size:15px}
+.post-soon{border-style:dashed}
+@media (max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.gal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.gal-grid figure{margin:0;aspect-ratio:4/3;max-width:100%;border-radius:14px;overflow:hidden}
+.gal-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-ph{border:1.5px dashed var(--line);background:var(--chip);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px}
+.gal-ph span{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+@media (max-width:900px){.gal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+header nav{gap:18px}
+.v-no{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.svc h3{font-size:24px}
+.svc .hi{color:var(--muted);font-weight:600;font-size:15px;margin-top:-6px}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.svc li{padding-left:20px;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 0;margin-top:36px}
+.step{padding:0 18px 0 0;position:relative}
+.step .num{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--teal);font-size:14px;letter-spacing:.1em}
+.step .num::after{content:"";flex:1;height:1px;background:var(--line)}
+.step h3{font-size:21px;margin:12px 0 6px}
+.step p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* partners */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px}
+.who div{background:var(--chip);border-radius:14px;padding:18px}
+.who strong{display:block;font-size:17px}
+.who span{color:var(--muted);font-size:14.5px}
+.terms{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.terms span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13.5px;color:var(--muted);background:var(--surface)}
+
+/* story */
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.pearl{background:#fff;border-radius:22px;padding:28px;display:flex;justify-content:center;border:1px solid var(--line)}
+.pearl img{width:min(300px,100%);height:auto}
+.story p{max-width:62ch}
+.founder{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:2px}
+.founder strong{font-size:18px}
+.founder span{color:var(--muted);font-size:15px}
+
+/* contact band */
+.contact{background:var(--band);color:var(--band-ink);border-top:0}
+.contact h2{color:var(--band-ink)}
+.contact .eyebrow{color:var(--gold)}
+.c-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;margin-top:28px}
+.c-list{display:grid;gap:14px}
+.c-row{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.c-row small{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.c-row span{font-size:17px;word-break:break-word;min-width:0}
+.copy{background:transparent;border:1px solid rgba(255,255,255,.3);color:var(--band-ink);border-radius:8px;padding:4px 10px;font-size:13px;cursor:pointer;font-family:var(--body)}
+.reg{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;display:grid;gap:12px;align-content:start}
+.reg div{display:grid;gap:2px}
+.reg small{color:var(--gold);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.reg span{font-variant-numeric:tabular-nums;font-size:16.5px}
+.wa{margin-top:22px}
+.contact .btn.primary{background:var(--gold);border-color:var(--gold);color:#142B4A}
+footer{background:var(--band);color:rgba(255,255,255,.6);font-size:13.5px}
+footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:1000px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .hero-grid,.story,.c-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:22px}
+  .step{padding:0}
+  .who{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .svc-grid,.who{grid-template-columns:1fr}
+  section{padding-block:52px}
+  .c-row{grid-template-columns:1fr auto}
+  .c-row small{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mukta Consultancy home"><img src="assets/logo-horizontal.webp" alt="Mukta Consultancy"></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Project, Business &amp; Management Consultancy</div>
+        <h1>From the first step to a <em>steady village income</em>.</h1>
+        <p class="hi-line">पहले कदम से स्थायी आय तक: पशुपालन, कृषि और स्व-सहायता समूहों के लिए योजना, प्रशिक्षण और बाज़ार। ऐसे उद्यम, जो प्रोजेक्ट खत्म होने के बाद भी आत्मनिर्भर और टिकाऊ रहें।</p>
+        <p class="lede">We work as consultants and project managers for government departments, district administrations, NGOs, private companies, research institutions and self-help groups. From SHG livelihoods and livestock enterprises to DPRs and market linkage, we offer an <strong>end-to-end solution</strong>: we plan, set up and run projects that keep delivering after they end.</p>
+        <p class="promise">Your partner from plan to success. <span>हमारा साथ, आपकी सफलता।</span></p>
+        <div class="cta">
+          <a class="btn primary" href="https://wa.me/918962109900" target="_blank" rel="noopener">WhatsApp us</a>
+          <a class="btn ghost" href="#services">See our services</a>
+        </div>
+      </div>
+      <aside class="vm" aria-label="Vision and mission">
+        <div class="vm-block">
+          <div class="vm-label">Our vision</div>
+          <p class="vm-text">Self-reliant rural communities where every family earns a steady income with dignity.</p>
+        </div>
+        <div class="vm-block">
+          <div class="vm-label">Our mission</div>
+          <ul class="vm-list">
+            <li>Plan and deliver projects that keep running after the funding ends.</li>
+            <li>Turn beneficiaries into producers, owners and successful entrepreneurs.</li>
+            <li>Work on the ground with our clients and communities, from the first step to lasting results.</li>
+          </ul>
+        </div>
+        <div class="tagline">PEOPLE | KNOWLEDGE | IMPACT</div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow">Services we provide</div>
+      <h2>Six verticals, one end-to-end team</h2>
+      <p class="lede">Each vertical can be taken on its own, or together as one project managed from the first concept to the final result.</p>
+      <div class="svc-grid">
+        <article class="svc">
+          <div class="v-no">Vertical 1</div>
+          <h3>Business Systems &amp; Compliance</h3>
+          <div class="hi">व्यवसाय प्रणाली, लेखा एवं अनुपालन</div>
+          <ul>
+            <li>Quality management systems (QMS) and SOPs</li>
+            <li>Operating systems for daily production and sales</li>
+            <li>Accounting, records and MIS</li>
+            <li>Statutory and regulatory compliance</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="v-no">Vertical 2</div>
+          <h3>DPR &amp; Project Management</h3>
+          <div class="hi">परियोजना रिपोर्ट एवं प्रबंधन</div>
+          <ul>
+            <li>Project conceptualisation and design</li>
+            <li>Socio-techno-commercial feasibility studies</li>
+            <li>Detailed Project Reports with costs, returns and timelines</li>
+            <li>Partner and stakeholder mobilisation</li>
+            <li>Implementation, field monitoring and progress reporting</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="v-no">Vertical 3</div>
+          <h3>Training &amp; Capacity Building</h3>
+          <div class="hi">प्रशिक्षण एवं क्षमता निर्माण</div>
+          <ul>
+            <li>Technical training for producers and entrepreneurs</li>
+            <li>Training of community cadres and field staff</li>
+            <li>Business, leadership and financial skills</li>
+            <li>Exposure visits and hand-holding on the ground</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="v-no">Vertical 4</div>
+          <h3>SHG &amp; Livelihoods</h3>
+          <div class="hi">स्व-सहायता समूह एवं आजीविका</div>
+          <ul>
+            <li>Mobilising SHGs, village organisations and federations</li>
+            <li>Livelihood planning for households and groups</li>
+            <li>Financial literacy, book-keeping and group governance</li>
+            <li>Bank and credit linkage for groups</li>
+            <li>Ownership training: beneficiary to producer to owner-member to successful entrepreneur</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="v-no">Vertical 5</div>
+          <h3>Livestock &amp; Agri Enterprises</h3>
+          <div class="hi">पशुपालन एवं कृषि उद्यम</div>
+          <ul>
+            <li>Poultry, goatery, dairy, fisheries and farm-based enterprises</li>
+            <li>Veterinary support, feed and health protocols</li>
+            <li>Streamlining production for steady, predictable output</li>
+            <li>Maize, soybean and other field-crop cultivation</li>
+            <li>Input supply and unit set-up</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <div class="v-no">Vertical 6</div>
+          <h3>Market Linkages</h3>
+          <div class="hi">बाज़ार संपर्क</div>
+          <ul>
+            <li>Market surveys and supply chain studies</li>
+            <li>Buyer linkage and marketing of products</li>
+            <li>Anganwadi and institutional supply</li>
+            <li>Branding and packaging support</li>
+            <li>Convergence with government schemes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="eyebrow">How we work</div>
+      <h2>On the ground, from concept to result</h2>
+      <p class="field-note"><strong>Field-first.</strong> Our ground team works in the villages, farms and production units, side by side with the people the project serves. Every step below is led in the field, not from a desk.</p>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Conceptualise</h3><p>We study the area in person before shaping the project.</p></div>
+        <div class="step"><div class="num">02</div><h3>Plan &amp; DPR</h3><p>Plans built on field data, not desk estimates.</p></div>
+        <div class="step"><div class="num">03</div><h3>Mobilise</h3><p>Our team meets partners and communities face to face.</p></div>
+        <div class="step"><div class="num">04</div><h3>Design systems</h3><p>Systems shaped around each site and its people.</p></div>
+        <div class="step"><div class="num">05</div><h3>Implement</h3><p>Our field team stays on site through set-up and start.</p></div>
+        <div class="step"><div class="num">06</div><h3>Streamline</h3><p>Regular field visits keep production on track.</p></div>
+        <div class="step"><div class="num">07</div><h3>Market &amp; account</h3><p>We handle buyers, accounts and compliances.</p></div>
+        <div class="step"><div class="num">08</div><h3>Deliver &amp; sustain</h3><p>We stay until the enterprise runs on its own.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow">Our projects</div>
+      <h2>Work in progress, updated as it grows</h2>
+      <p class="lede">We will share our projects here as the work moves forward on the ground, with the client type, location, what we did and the results.</p>
+      <div class="soon-grid">
+        <div class="soon"><span class="pill">Coming soon</span><strong>Livelihood &amp; enterprise projects</strong><span>SHG and livestock enterprise work with institutional partners.</span></div>
+        <div class="soon"><span class="pill">Coming soon</span><strong>DPRs &amp; feasibility studies</strong><span>Project reports prepared for government and CSR clients.</span></div>
+        <div class="soon"><span class="pill">Coming soon</span><strong>Training programmes</strong><span>Capacity building for producers, cadres and field teams.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Who we work with</div>
+      <h2>Open to every client with a project to deliver</h2>
+      <div class="who">
+        <div><strong>Government departments</strong><span>Scheme design, DPRs and programme management</span></div>
+        <div><strong>District administrations</strong><span>DMF and scheme-linked livelihood projects</span></div>
+        <div><strong>Private companies &amp; CSR</strong><span>CSR design, roll-out and impact reporting</span></div>
+        <div><strong>NGOs &amp; foundations</strong><span>Project planning, field execution and monitoring</span></div>
+        <div><strong>Research &amp; academic institutions</strong><span>Field consulting and project management for research pilots</span></div>
+        <div><strong>SHGs, federations &amp; FPOs</strong><span>Enterprise plans, training and market access</span></div>
+      </div>
+      <div class="terms" aria-label="Programmes and terms we work with">
+        <span>NRLM · Bihan</span><span>SHG · VO · CLF</span><span>FPO</span><span>DMF</span><span>CSR Schedule VII</span><span>Anganwadi supply</span><span>Layer poultry</span><span>Goatery</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="eyebrow">Gallery</div>
+      <h2>From the field</h2>
+      <p class="lede">Photos from our work in villages, farms, training halls and production units. New photos will be added as projects move forward.</p>
+      <div class="gal-grid" id="gallery-list">
+        <figure class="gal-ph"><span>Field photos coming soon</span></figure>
+        <figure class="gal-ph"></figure>
+        <figure class="gal-ph"></figure>
+        <figure class="gal-ph"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What our clients and communities say</h2>
+      <div class="quote-empty">
+        <div class="qmark" aria-hidden="true">&ldquo;</div>
+        <p>Feedback from our clients, partners and the communities we work with will be shared here as our projects are completed.</p>
+        <p class="qsub">Worked with us? We would value your feedback. Send it through the form in the Contact section.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="wrap">
+      <div class="eyebrow">Blog</div>
+      <h2>Notes from the field</h2>
+      <p class="lede">Practical articles on livelihoods, livestock and agri enterprises, DPRs and project management, written from our work on the ground. A new article every month.</p>
+      <div class="blog-grid" id="blog-list">
+        <article class="post post-soon">
+          <span class="pill">First article coming soon</span>
+          <strong>Our first article is on its way</strong>
+          <span>Check back soon for field notes and practical guides.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap story">
+      <div class="pearl"><img src="assets/logo-full.webp" alt="Mukta Consultancy logo: People | Knowledge | Impact"></div>
+      <div>
+        <div class="eyebrow">About the name</div>
+        <h2>मुक्ता: free, and a pearl</h2>
+        <p>Mukta is named after the founder's elder uncle, <strong>Shri Mukta Prasad Dubey</strong>, fondly called <strong>Dadhi Dada</strong> (दाढ़ी दादा). He was the founder's guru and role model, and gave everything he had for him. This firm carries his name forward. In Hindi it carries two meanings: to be free (<strong>मुक्त</strong>), and a pearl (<strong>मोती</strong>). That is the idea behind the firm: help rural families, especially women, become free to earn on their own terms, and build enterprises with lasting value.</p>
+        <p>The mark shows a pearl held by two leaves, the group and the community around it.</p>
+        <div class="founder">
+          <span>Led by a founder with 15+ years of experience in women-led poultry, agri and fisheries enterprises across Madhya Pradesh and Chhattisgarh.</span>
+        </div>
+      
+      </div>
+    </div>
+    <div class="wrap pair">
+        <aside class="ledger pair-box" aria-label="What MUKTA stands for">
+          <div class="ledger-head"><span>MUKTA</span><small>what the name stands for</small></div>
+          <ol>
+            <li><b>M</b><span>Multi<i>Many sectors, one team</i></span></li>
+            <li><b>U</b><span>Utility<i>Work that is useful on the ground</i></span></li>
+            <li><b>K</b><span>Knowledge<i>Training that stays with the group</i></span></li>
+            <li><b>T</b><span>Technical<i>Sound numbers, sound designs</i></span></li>
+            <li><b>A</b><span>Assistance<i>Hand-holding until it runs</i></span></li>
+          </ol>
+        </aside>
+        <aside class="ledger pair-box" aria-label="What our tagline means">
+          <div class="ledger-head"><span>PEOPLE | KNOWLEDGE | IMPACT</span><small>what our tagline means</small></div>
+          <ol class="tag-list">
+            <li><span>People<i>Every project starts and ends with people. We sit with the community, the client and every partner, understand their needs and strengths, and plan around them. Women, farmers, producers and field teams are treated as partners in the work, not just beneficiaries of it.</i></span></li>
+            <li><span>Knowledge<i>We bring technical know-how, sound business systems and practical training to the ground. Groups learn to run production, keep accounts and take decisions on their own. The knowledge stays with them long after our team steps back.</i></span></li>
+            <li><span>Impact<i>We measure success by what changes on the ground: steady income for families, real ownership by members and enterprises that keep running after the project ends. Every result is recorded and reported, so clients and funders can see the difference their support has made.</i></span></li>
+          </ol>
+        </aside>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h2>Talk to us about your project</h2>
+      <div class="c-grid">
+        <div>
+          <div class="c-list">
+            <div class="c-row"><small>Phone</small><span>+91 89621 09900</span><a class="act" href="tel:+918962109900">Call</a></div>
+            <div class="c-row"><small>Email</small><span>muktaconsultancy.india@gmail.com</span><a class="act" href="mailto:muktaconsultancy.india@gmail.com">Email</a></div>
+            <div class="c-row"><small>Location</small><span>Konari, Dist. Rajnandgaon, Chhattisgarh</span><span></span></div>
+          </div>
+          <a class="btn primary wa" href="https://wa.me/918962109900" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>Message on WhatsApp</span></a>
+          <div class="social" hidden><small>Follow us</small><div class="soc-row"><a class="soc" href="#" data-social="Facebook" aria-label="Mukta Consultancy on Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg></a><a class="soc" href="#" data-social="Instagram" aria-label="Mukta Consultancy on Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8.1c-.1-1.6-.4-3-1.6-4.2S17.5 2.2 15.9 2.1C14.3 2 9.7 2 8.1 2.1 6.5 2.2 5.1 2.5 3.9 3.7S2.2 6.5 2.1 8.1C2 9.7 2 14.3 2.1 15.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.2.1 7.8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.2 0-7.8zM19.8 18a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4A3.2 3.2 0 0 1 4.8 18c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.2 3.2 0 0 1 6.6 4.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg></a><a class="soc" href="#" data-social="LinkedIn" aria-label="Mukta Consultancy on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></a><a class="soc" href="#" data-social="YouTube" aria-label="Mukta Consultancy on YouTube" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a></div></div>
+          <div class="reg" aria-label="Registration details">
+            <div><small>Firm</small><span>MUKTA CONSULTANCY (Proprietorship)</span></div>
+            <div><small>GSTIN</small><span>22AUXPD9271D1ZH</span></div>
+            <div><small>Udyam (MSME)</small><span>UDYAM-CG-15-0041126</span></div>
+          </div>
+        </div>
+        <form class="enq" id="enq" novalidate>
+          <h3>Raise your query</h3>
+          <p class="enq-sub">Share your details and we will call you back.</p>
+          <div class="f2">
+            <label for="q-name">Name<input id="q-name" name="name" autocomplete="name" required></label>
+            <label for="q-phone">Phone<input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+          </div>
+          <div class="f2">
+            <label for="q-email">Email<input id="q-email" name="email" type="email" autocomplete="email"></label>
+            <label for="q-org">Organisation<input id="q-org" name="org" autocomplete="organization"></label>
+          </div>
+          <label for="q-addr">Address / District<input id="q-addr" name="address" autocomplete="street-address"></label>
+          <label for="q-msg">Your query<textarea id="q-msg" name="message" rows="4" required></textarea></label>
+          <p class="enq-err" id="q-err" hidden>Please enter your name, phone number and query.</p>
+          <div class="enq-actions">
+            <button class="btn wa-btn" type="submit"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>Send on WhatsApp</span></button>
+            <a class="btn ghost-light" id="q-mail" href="mailto:muktaconsultancy.india@gmail.com">Send by email</a>
+          </div>
+          <p class="enq-ok" id="q-ok" hidden>Thank you. Your query is ready in WhatsApp. Press send there and we will get back to you.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© 2026 Mukta Consultancy · Multi Utility Knowledge &amp; Technical Assistance</span><span>PEOPLE | KNOWLEDGE | IMPACT</span></div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy');
+    var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o},1500)};
+    try{navigator.clipboard.writeText(t).then(done,function(){sel(b)})}catch(e){sel(b)}
+  });
+});
+function sel(b){var s=b.previousElementSibling;var r=document.createRange();r.selectNodeContents(s);var w=getSelection();w.removeAllRanges();w.addRange(r);}
+
+(function(){
+  var f=document.getElementById('enq'); if(!f) return;
+  var mail=document.getElementById('q-mail');
+  function v(id){return (document.getElementById(id).value||'').trim()}
+  function text(){
+    return 'New enquiry for Mukta Consultancy\n'+
+      'Name: '+v('q-name')+'\nPhone: '+v('q-phone')+
+      (v('q-email')?'\nEmail: '+v('q-email'):'')+
+      (v('q-org')?'\nOrganisation: '+v('q-org'):'')+
+      (v('q-addr')?'\nAddress: '+v('q-addr'):'')+
+      '\nQuery: '+v('q-msg');
+  }
+  function upd(){mail.href='mailto:muktaconsultancy.india@gmail.com?subject='+encodeURIComponent('Enquiry from '+(v('q-name')||'website'))+'&body='+encodeURIComponent(text());}
+  f.addEventListener('input',upd); upd();
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('q-err'), ok=document.getElementById('q-ok');
+    if(!v('q-name')||!v('q-phone')||!v('q-msg')){err.hidden=false;ok.hidden=true;return;}
+    err.hidden=true;
+    var a=document.createElement('a'); a.href='https://wa.me/918962109900?text='+encodeURIComponent(text()); a.target='_blank'; a.rel='noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    ok.hidden=false;
+  });
+})();
+</script>
+</body>
+</html>
