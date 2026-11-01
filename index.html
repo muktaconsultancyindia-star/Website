@@ -165,7 +165,6 @@ header nav{gap:18px}
 .v-no{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .svc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:12px}
 .svc h3{font-size:24px}
-.svc .hi{color:var(--muted);font-weight:600;font-size:15px;margin-top:-6px}
 .svc ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
 .svc li{padding-left:20px;position:relative}
 .svc li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
@@ -227,22 +226,37 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
   .c-row{grid-template-columns:1fr auto}
   .c-row small{grid-column:1/-1}
 }
+.hdr-r{display:flex;align-items:center;gap:18px}
+.lang{display:inline-flex;flex:none;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.lang button{border:0;background:transparent;color:var(--ink);font-family:var(--body);font-weight:700;font-size:14px;padding:7px 14px;cursor:pointer;min-height:36px}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.lang button:focus-visible{outline:2px solid var(--teal);outline-offset:-2px}
+:root[data-theme="dark"] .lang button[aria-pressed="true"]{background:var(--teal);color:#0E1C30}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lang button[aria-pressed="true"]{background:var(--teal);color:#0E1C30}}
+:root[lang="hi"] h1,:root[lang="hi"] h2,:root[lang="hi"] h3,:root[lang="hi"] .vm-text,:root[lang="hi"] .soon strong{font-family:var(--body);font-weight:700}
+:root[lang="hi"] .promise{font-family:var(--body);font-weight:600}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mukta Consultancy home"><img src="assets/logo-horizontal.webp" alt="Mukta Consultancy"></a>
+    <div class="hdr-r">
     <nav aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#approach">Approach</a>
-      <a href="#projects">Projects</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#services" data-hi-html="सेवाएँ">Services</a>
+      <a href="#approach" data-hi-html="कार्य-पद्धति">Approach</a>
+      <a href="#projects" data-hi-html="प्रोजेक्ट">Projects</a>
+      <a href="#gallery" data-hi-html="गैलरी">Gallery</a>
+      <a href="#testimonials" data-hi-html="अनुभव">Testimonials</a>
+      <a href="#blog" data-hi-html="ब्लॉग">Blog</a>
+      <a href="#about" data-hi-html="हमारे बारे में">About</a>
+      <a href="#contact" data-hi-html="संपर्क">Contact</a>
     </nav>
+    <div class="lang" role="group" aria-label="Language / भाषा">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="hi" aria-pressed="false">हिंदी</button>
+    </div>
+    </div>
   </div>
 </header>
 
@@ -250,27 +264,27 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Project, Business &amp; Management Consultancy</div>
-        <h1>From the first step to a <em>steady village income</em>.</h1>
+        <div class="eyebrow" data-hi-html="प्रोजेक्ट, बिज़नेस एवं प्रबंधन परामर्श">Project, Business &amp; Management Consultancy</div>
+        <h1 data-hi-html="शुरुआत से &lt;em&gt;गाँव की स्थायी आय&lt;/em&gt; तक।">From the first step to a <em>steady village income</em>.</h1>
         <p class="hi-line">पहले कदम से स्थायी आय तक: पशुपालन, कृषि और स्व-सहायता समूहों के लिए योजना, प्रशिक्षण और बाज़ार। ऐसे उद्यम, जो प्रोजेक्ट खत्म होने के बाद भी आत्मनिर्भर और टिकाऊ रहें।</p>
-        <p class="lede">We work as consultants and project managers for government departments, district administrations, NGOs, private companies, research institutions and self-help groups. From SHG livelihoods and livestock enterprises to DPRs and market linkage, we offer an <strong>end-to-end solution</strong>: we plan, set up and run projects that keep delivering after they end.</p>
-        <p class="promise">Your partner from plan to success. <span>हमारा साथ, आपकी सफलता।</span></p>
+        <p class="lede" data-hi-html="हम सरकारी विभागों, ज़िला प्रशासन, NGO, निजी कंपनियों, शोध संस्थानों और स्व-सहायता समूहों के लिए सलाहकार और प्रोजेक्ट मैनेजर के रूप में काम करते हैं। SHG आजीविका और पशुपालन उद्यम से लेकर DPR और बाज़ार संपर्क तक, हम &lt;strong&gt;शुरू से अंत तक पूरा समाधान&lt;/strong&gt; देते हैं: ऐसे प्रोजेक्ट की योजना बनाते, स्थापित करते और चलाते हैं, जो खत्म होने के बाद भी नतीजे देते रहें।">We work as consultants and project managers for government departments, district administrations, NGOs, private companies, research institutions and self-help groups. From SHG livelihoods and livestock enterprises to DPRs and market linkage, we offer an <strong>end-to-end solution</strong>: we plan, set up and run projects that keep delivering after they end.</p>
+        <p class="promise" data-hi-html="योजना से सफलता तक, आपका साथी। &lt;span&gt;हमारा साथ, आपकी सफलता।&lt;/span&gt;">Your partner from plan to success. <span>हमारा साथ, आपकी सफलता।</span></p>
         <div class="cta">
-          <a class="btn primary" href="https://wa.me/918962109900" target="_blank" rel="noopener">WhatsApp us</a>
-          <a class="btn ghost" href="#services">See our services</a>
+          <a class="btn primary" href="https://wa.me/918962109900" target="_blank" rel="noopener" data-hi-html="WhatsApp करें">WhatsApp us</a>
+          <a class="btn ghost" href="#services" data-hi-html="हमारी सेवाएँ देखें">See our services</a>
         </div>
       </div>
       <aside class="vm" aria-label="Vision and mission">
         <div class="vm-block">
-          <div class="vm-label">Our vision</div>
-          <p class="vm-text">Self-reliant rural communities where every family earns a steady income with dignity.</p>
+          <div class="vm-label" data-hi-html="हमारा विज़न">Our vision</div>
+          <p class="vm-text" data-hi-html="आत्मनिर्भर ग्रामीण समुदाय, जहाँ हर परिवार सम्मान के साथ स्थायी आय कमाए।">Self-reliant rural communities where every family earns a steady income with dignity.</p>
         </div>
         <div class="vm-block">
-          <div class="vm-label">Our mission</div>
+          <div class="vm-label" data-hi-html="हमारा मिशन">Our mission</div>
           <ul class="vm-list">
-            <li>Plan and deliver projects that keep running after the funding ends.</li>
-            <li>Turn beneficiaries into producers, owners and successful entrepreneurs.</li>
-            <li>Work on the ground with our clients and communities, from the first step to lasting results.</li>
+            <li data-hi-html="ऐसे प्रोजेक्ट की योजना बनाना और उन्हें लागू करना, जो फ़ंडिंग खत्म होने के बाद भी चलते रहें।">Plan and deliver projects that keep running after the funding ends.</li>
+            <li data-hi-html="लाभार्थियों को उत्पादक, मालिक और सफल उद्यमी बनाना।">Turn beneficiaries into producers, owners and successful entrepreneurs.</li>
+            <li data-hi-html="अपने क्लाइंट और समुदायों के साथ ज़मीन पर काम करना, पहले कदम से स्थायी नतीजों तक।">Work on the ground with our clients and communities, from the first step to lasting results.</li>
           </ul>
         </div>
         <div class="tagline">PEOPLE | KNOWLEDGE | IMPACT</div>
@@ -280,78 +294,72 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
 
   <section id="services">
     <div class="wrap">
-      <div class="eyebrow">Services we provide</div>
-      <h2>Six verticals, one end-to-end team</h2>
-      <p class="lede">Each vertical can be taken on its own, or together as one project managed from the first concept to the final result.</p>
+      <div class="eyebrow" data-hi-html="हमारी सेवाएँ">Services we provide</div>
+      <h2 data-hi-html="छह क्षेत्र, शुरू से अंत तक एक टीम">Six verticals, one end-to-end team</h2>
+      <p class="lede" data-hi-html="हर क्षेत्र का काम अलग से भी लिया जा सकता है, या सभी को मिलाकर एक प्रोजेक्ट के रूप में, पहली सोच से अंतिम नतीजे तक।">Each vertical can be taken on its own, or together as one project managed from the first concept to the final result.</p>
       <div class="svc-grid">
         <article class="svc">
-          <div class="v-no">Vertical 1</div>
-          <h3>Business Systems &amp; Compliance</h3>
-          <div class="hi">व्यवसाय प्रणाली, लेखा एवं अनुपालन</div>
+          <div class="v-no" data-hi-html="क्षेत्र 1">Vertical 1</div>
+          <h3 data-hi-html="व्यवसाय प्रणाली, लेखा एवं अनुपालन">Business Systems &amp; Compliance</h3>
           <ul>
-            <li>Quality management systems (QMS) and SOPs</li>
-            <li>Operating systems for daily production and sales</li>
-            <li>Accounting, records and MIS</li>
-            <li>Statutory and regulatory compliance</li>
+            <li data-hi-html="गुणवत्ता प्रबंधन प्रणाली (QMS) और SOP">Quality management systems (QMS) and SOPs</li>
+            <li data-hi-html="रोज़ के उत्पादन और बिक्री के लिए संचालन प्रणाली">Operating systems for daily production and sales</li>
+            <li data-hi-html="लेखा, रिकॉर्ड और MIS">Accounting, records and MIS</li>
+            <li data-hi-html="वैधानिक और नियामक अनुपालन">Statutory and regulatory compliance</li>
           </ul>
         </article>
         <article class="svc">
-          <div class="v-no">Vertical 2</div>
-          <h3>DPR &amp; Project Management</h3>
-          <div class="hi">परियोजना रिपोर्ट एवं प्रबंधन</div>
+          <div class="v-no" data-hi-html="क्षेत्र 2">Vertical 2</div>
+          <h3 data-hi-html="परियोजना रिपोर्ट (DPR) एवं प्रबंधन">DPR &amp; Project Management</h3>
           <ul>
-            <li>Project conceptualisation and design</li>
-            <li>Socio-techno-commercial feasibility studies</li>
-            <li>Detailed Project Reports with costs, returns and timelines</li>
-            <li>Partner and stakeholder mobilisation</li>
-            <li>Implementation, field monitoring and progress reporting</li>
+            <li data-hi-html="प्रोजेक्ट की परिकल्पना और डिज़ाइन">Project conceptualisation and design</li>
+            <li data-hi-html="सामाजिक, तकनीकी और व्यावसायिक व्यवहार्यता अध्ययन">Socio-techno-commercial feasibility studies</li>
+            <li data-hi-html="लागत, लाभ और समय-सीमा के साथ विस्तृत परियोजना रिपोर्ट (DPR)">Detailed Project Reports with costs, returns and timelines</li>
+            <li data-hi-html="साझेदारों और हितधारकों को जोड़ना">Partner and stakeholder mobilisation</li>
+            <li data-hi-html="क्रियान्वयन, फ़ील्ड निगरानी और प्रगति रिपोर्टिंग">Implementation, field monitoring and progress reporting</li>
           </ul>
         </article>
         <article class="svc">
-          <div class="v-no">Vertical 3</div>
-          <h3>Training &amp; Capacity Building</h3>
-          <div class="hi">प्रशिक्षण एवं क्षमता निर्माण</div>
+          <div class="v-no" data-hi-html="क्षेत्र 3">Vertical 3</div>
+          <h3 data-hi-html="प्रशिक्षण एवं क्षमता निर्माण">Training &amp; Capacity Building</h3>
           <ul>
-            <li>Technical training for producers and entrepreneurs</li>
-            <li>Training of community cadres and field staff</li>
-            <li>Business, leadership and financial skills</li>
-            <li>Exposure visits and hand-holding on the ground</li>
+            <li data-hi-html="उत्पादकों और उद्यमियों के लिए तकनीकी प्रशिक्षण">Technical training for producers and entrepreneurs</li>
+            <li data-hi-html="सामुदायिक कैडर और फ़ील्ड स्टाफ़ का प्रशिक्षण">Training of community cadres and field staff</li>
+            <li data-hi-html="व्यवसाय, नेतृत्व और वित्तीय कौशल">Business, leadership and financial skills</li>
+            <li data-hi-html="एक्सपोज़र विज़िट और ज़मीन पर लगातार मार्गदर्शन">Exposure visits and hand-holding on the ground</li>
           </ul>
         </article>
         <article class="svc">
-          <div class="v-no">Vertical 4</div>
-          <h3>SHG &amp; Livelihoods</h3>
-          <div class="hi">स्व-सहायता समूह एवं आजीविका</div>
+          <div class="v-no" data-hi-html="क्षेत्र 4">Vertical 4</div>
+          <h3 data-hi-html="स्व-सहायता समूह एवं आजीविका">SHG &amp; Livelihoods</h3>
           <ul>
-            <li>Mobilising SHGs, village organisations and federations</li>
-            <li>Livelihood planning for households and groups</li>
-            <li>Financial literacy, book-keeping and group governance</li>
-            <li>Bank and credit linkage for groups</li>
-            <li>Ownership training: beneficiary to producer to owner-member to successful entrepreneur</li>
+            <li data-hi-html="SHG, ग्राम संगठन और फ़ेडरेशन बनाना और सक्रिय करना">Mobilising SHGs, village organisations and federations</li>
+            <li data-hi-html="परिवारों और समूहों के लिए आजीविका योजना">Livelihood planning for households and groups</li>
+            <li data-hi-html="वित्तीय साक्षरता, हिसाब-किताब और समूह संचालन">Financial literacy, book-keeping and group governance</li>
+            <li data-hi-html="समूहों के लिए बैंक और ऋण जुड़ाव">Bank and credit linkage for groups</li>
+            <li data-hi-html="स्वामित्व प्रशिक्षण: लाभार्थी से उत्पादक, फिर मालिक-सदस्य और सफल उद्यमी तक">Ownership training: beneficiary to producer to owner-member to successful entrepreneur</li>
           </ul>
         </article>
         <article class="svc">
-          <div class="v-no">Vertical 5</div>
-          <h3>Livestock &amp; Agri Enterprises</h3>
-          <div class="hi">पशुपालन एवं कृषि उद्यम</div>
+          <div class="v-no" data-hi-html="क्षेत्र 5">Vertical 5</div>
+          <h3 data-hi-html="पशुपालन एवं कृषि उद्यम">Livestock &amp; Agri Enterprises</h3>
           <ul>
-            <li>Poultry, goatery, dairy, fisheries and farm-based enterprises</li>
-            <li>Veterinary support, feed and health protocols</li>
-            <li>Streamlining production for steady, predictable output</li>
-            <li>Maize, soybean and other field-crop cultivation</li>
-            <li>Input supply and unit set-up</li>
+            <li data-hi-html="मुर्गीपालन, बकरीपालन, डेयरी, मछलीपालन और खेती-आधारित उद्यम">Poultry, goatery, dairy, fisheries and farm-based enterprises</li>
+            <li data-hi-html="पशु-चिकित्सा सहायता, आहार और स्वास्थ्य प्रोटोकॉल">Veterinary support, feed and health protocols</li>
+            <li data-hi-html="स्थिर और भरोसेमंद उत्पादन के लिए प्रक्रिया को सुव्यवस्थित करना">Streamlining production for steady, predictable output</li>
+            <li data-hi-html="मक्का, सोयाबीन और अन्य फ़सलों की खेती">Maize, soybean and other field-crop cultivation</li>
+            <li data-hi-html="इनपुट आपूर्ति और यूनिट की स्थापना">Input supply and unit set-up</li>
           </ul>
         </article>
         <article class="svc">
-          <div class="v-no">Vertical 6</div>
-          <h3>Market Linkages</h3>
-          <div class="hi">बाज़ार संपर्क</div>
+          <div class="v-no" data-hi-html="क्षेत्र 6">Vertical 6</div>
+          <h3 data-hi-html="बाज़ार संपर्क">Market Linkages</h3>
           <ul>
-            <li>Market surveys and supply chain studies</li>
-            <li>Buyer linkage and marketing of products</li>
-            <li>Anganwadi and institutional supply</li>
-            <li>Branding and packaging support</li>
-            <li>Convergence with government schemes</li>
+            <li data-hi-html="बाज़ार सर्वे और सप्लाई चेन अध्ययन">Market surveys and supply chain studies</li>
+            <li data-hi-html="खरीदारों से जुड़ाव और उत्पादों की मार्केटिंग">Buyer linkage and marketing of products</li>
+            <li data-hi-html="आंगनवाड़ी और संस्थागत आपूर्ति">Anganwadi and institutional supply</li>
+            <li data-hi-html="ब्रांडिंग और पैकेजिंग सहायता">Branding and packaging support</li>
+            <li data-hi-html="सरकारी योजनाओं के साथ समन्वय">Convergence with government schemes</li>
           </ul>
         </article>
       </div>
@@ -360,46 +368,46 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
 
   <section id="approach">
     <div class="wrap">
-      <div class="eyebrow">How we work</div>
-      <h2>On the ground, from concept to result</h2>
-      <p class="field-note"><strong>Field-first.</strong> Our ground team works in the villages, farms and production units, side by side with the people the project serves. Every step below is led in the field, not from a desk.</p>
+      <div class="eyebrow" data-hi-html="हम कैसे काम करते हैं">How we work</div>
+      <h2 data-hi-html="ज़मीन पर, सोच से नतीजे तक">On the ground, from concept to result</h2>
+      <p class="field-note" data-hi-html="&lt;strong&gt;फ़ील्ड पहले।&lt;/strong&gt; हमारी ज़मीनी टीम गाँवों, खेतों और उत्पादन इकाइयों में, उन्हीं लोगों के साथ काम करती है जिनके लिए प्रोजेक्ट है। नीचे का हर चरण फ़ील्ड में होता है, दफ़्तर की मेज़ से नहीं।"><strong>Field-first.</strong> Our ground team works in the villages, farms and production units, side by side with the people the project serves. Every step below is led in the field, not from a desk.</p>
       <div class="steps">
-        <div class="step"><div class="num">01</div><h3>Conceptualise</h3><p>We study the area in person before shaping the project.</p></div>
-        <div class="step"><div class="num">02</div><h3>Plan &amp; DPR</h3><p>Plans built on field data, not desk estimates.</p></div>
-        <div class="step"><div class="num">03</div><h3>Mobilise</h3><p>Our team meets partners and communities face to face.</p></div>
-        <div class="step"><div class="num">04</div><h3>Design systems</h3><p>Systems shaped around each site and its people.</p></div>
-        <div class="step"><div class="num">05</div><h3>Implement</h3><p>Our field team stays on site through set-up and start.</p></div>
-        <div class="step"><div class="num">06</div><h3>Streamline</h3><p>Regular field visits keep production on track.</p></div>
-        <div class="step"><div class="num">07</div><h3>Market &amp; account</h3><p>We handle buyers, accounts and compliances.</p></div>
-        <div class="step"><div class="num">08</div><h3>Deliver &amp; sustain</h3><p>We stay until the enterprise runs on its own.</p></div>
+        <div class="step"><div class="num">01</div><h3 data-hi-html="परिकल्पना">Conceptualise</h3><p data-hi-html="प्रोजेक्ट बनाने से पहले हम खुद जाकर क्षेत्र को समझते हैं।">We study the area in person before shaping the project.</p></div>
+        <div class="step"><div class="num">02</div><h3 data-hi-html="योजना एवं DPR">Plan &amp; DPR</h3><p data-hi-html="योजना फ़ील्ड के आँकड़ों पर बनती है, अंदाज़ों पर नहीं।">Plans built on field data, not desk estimates.</p></div>
+        <div class="step"><div class="num">03</div><h3 data-hi-html="समुदाय को जोड़ना">Mobilise</h3><p data-hi-html="हमारी टीम साझेदारों और समुदायों से आमने-सामने मिलती है।">Our team meets partners and communities face to face.</p></div>
+        <div class="step"><div class="num">04</div><h3 data-hi-html="प्रणाली तैयार करना">Design systems</h3><p data-hi-html="हर जगह और वहाँ के लोगों के हिसाब से बनी प्रणाली।">Systems shaped around each site and its people.</p></div>
+        <div class="step"><div class="num">05</div><h3 data-hi-html="क्रियान्वयन">Implement</h3><p data-hi-html="स्थापना और शुरुआत तक हमारी फ़ील्ड टीम वहीं रहती है।">Our field team stays on site through set-up and start.</p></div>
+        <div class="step"><div class="num">06</div><h3 data-hi-html="सुव्यवस्थित करना">Streamline</h3><p data-hi-html="नियमित फ़ील्ड विज़िट से उत्पादन सही दिशा में रहता है।">Regular field visits keep production on track.</p></div>
+        <div class="step"><div class="num">07</div><h3 data-hi-html="बाज़ार एवं हिसाब">Market &amp; account</h3><p data-hi-html="खरीदार, हिसाब-किताब और अनुपालन हम संभालते हैं।">We handle buyers, accounts and compliances.</p></div>
+        <div class="step"><div class="num">08</div><h3 data-hi-html="सौंपना एवं टिकाऊ बनाना">Deliver &amp; sustain</h3><p data-hi-html="जब तक उद्यम खुद न चलने लगे, हम साथ रहते हैं।">We stay until the enterprise runs on its own.</p></div>
       </div>
     </div>
   </section>
 
   <section id="projects">
     <div class="wrap">
-      <div class="eyebrow">Our projects</div>
-      <h2>Work in progress, updated as it grows</h2>
-      <p class="lede">We will share our projects here as the work moves forward on the ground, with the client type, location, what we did and the results.</p>
+      <div class="eyebrow" data-hi-html="हमारे प्रोजेक्ट">Our projects</div>
+      <h2 data-hi-html="काम जारी है, जैसे-जैसे बढ़ेगा, यहाँ जुड़ेगा">Work in progress, updated as it grows</h2>
+      <p class="lede" data-hi-html="ज़मीन पर काम आगे बढ़ने के साथ हम अपने प्रोजेक्ट यहाँ साझा करेंगे: क्लाइंट का प्रकार, जगह, हमने क्या किया और क्या नतीजे मिले।">We will share our projects here as the work moves forward on the ground, with the client type, location, what we did and the results.</p>
       <div class="soon-grid">
-        <div class="soon"><span class="pill">Coming soon</span><strong>Livelihood &amp; enterprise projects</strong><span>SHG and livestock enterprise work with institutional partners.</span></div>
-        <div class="soon"><span class="pill">Coming soon</span><strong>DPRs &amp; feasibility studies</strong><span>Project reports prepared for government and CSR clients.</span></div>
-        <div class="soon"><span class="pill">Coming soon</span><strong>Training programmes</strong><span>Capacity building for producers, cadres and field teams.</span></div>
+        <div class="soon"><span class="pill" data-hi-html="जल्द आ रहा है">Coming soon</span><strong data-hi-html="आजीविका एवं उद्यम प्रोजेक्ट">Livelihood &amp; enterprise projects</strong><span data-hi-html="संस्थागत साझेदारों के साथ SHG और पशुपालन उद्यम का काम।">SHG and livestock enterprise work with institutional partners.</span></div>
+        <div class="soon"><span class="pill" data-hi-html="जल्द आ रहा है">Coming soon</span><strong data-hi-html="DPR एवं व्यवहार्यता अध्ययन">DPRs &amp; feasibility studies</strong><span data-hi-html="सरकारी और CSR क्लाइंट के लिए तैयार परियोजना रिपोर्ट।">Project reports prepared for government and CSR clients.</span></div>
+        <div class="soon"><span class="pill" data-hi-html="जल्द आ रहा है">Coming soon</span><strong data-hi-html="प्रशिक्षण कार्यक्रम">Training programmes</strong><span data-hi-html="उत्पादकों, कैडर और फ़ील्ड टीमों का क्षमता निर्माण।">Capacity building for producers, cadres and field teams.</span></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="eyebrow">Who we work with</div>
-      <h2>Open to every client with a project to deliver</h2>
+      <div class="eyebrow" data-hi-html="हम किनके साथ काम करते हैं">Who we work with</div>
+      <h2 data-hi-html="हर उस क्लाइंट के लिए, जिसके पास पूरा करने को कोई प्रोजेक्ट है">Open to every client with a project to deliver</h2>
       <div class="who">
-        <div><strong>Government departments</strong><span>Scheme design, DPRs and programme management</span></div>
-        <div><strong>District administrations</strong><span>DMF and scheme-linked livelihood projects</span></div>
-        <div><strong>Private companies &amp; CSR</strong><span>CSR design, roll-out and impact reporting</span></div>
-        <div><strong>NGOs &amp; foundations</strong><span>Project planning, field execution and monitoring</span></div>
-        <div><strong>Research &amp; academic institutions</strong><span>Field consulting and project management for research pilots</span></div>
-        <div><strong>SHGs, federations &amp; FPOs</strong><span>Enterprise plans, training and market access</span></div>
+        <div><strong data-hi-html="सरकारी विभाग">Government departments</strong><span data-hi-html="योजना डिज़ाइन, DPR और कार्यक्रम प्रबंधन">Scheme design, DPRs and programme management</span></div>
+        <div><strong data-hi-html="ज़िला प्रशासन">District administrations</strong><span data-hi-html="DMF और योजनाओं से जुड़े आजीविका प्रोजेक्ट">DMF and scheme-linked livelihood projects</span></div>
+        <div><strong data-hi-html="निजी कंपनियाँ एवं CSR">Private companies &amp; CSR</strong><span data-hi-html="CSR डिज़ाइन, क्रियान्वयन और प्रभाव रिपोर्टिंग">CSR design, roll-out and impact reporting</span></div>
+        <div><strong data-hi-html="NGO एवं फ़ाउंडेशन">NGOs &amp; foundations</strong><span data-hi-html="प्रोजेक्ट योजना, फ़ील्ड क्रियान्वयन और निगरानी">Project planning, field execution and monitoring</span></div>
+        <div><strong data-hi-html="शोध एवं शैक्षणिक संस्थान">Research &amp; academic institutions</strong><span data-hi-html="शोध पायलट के लिए फ़ील्ड परामर्श और प्रोजेक्ट प्रबंधन">Field consulting and project management for research pilots</span></div>
+        <div><strong data-hi-html="SHG, फ़ेडरेशन एवं FPO">SHGs, federations &amp; FPOs</strong><span data-hi-html="उद्यम योजना, प्रशिक्षण और बाज़ार तक पहुँच">Enterprise plans, training and market access</span></div>
       </div>
       <div class="terms" aria-label="Programmes and terms we work with">
         <span>NRLM · Bihan</span><span>SHG · VO · CLF</span><span>FPO</span><span>DMF</span><span>CSR Schedule VII</span><span>Anganwadi supply</span><span>Layer poultry</span><span>Goatery</span>
@@ -409,9 +417,9 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
 
   <section id="gallery">
     <div class="wrap">
-      <div class="eyebrow">Gallery</div>
-      <h2>From the field</h2>
-      <p class="lede">Photos from our work in villages, farms, training halls and production units. New photos will be added as projects move forward.</p>
+      <div class="eyebrow" data-hi-html="गैलरी">Gallery</div>
+      <h2 data-hi-html="फ़ील्ड से">From the field</h2>
+      <p class="lede" data-hi-html="गाँवों, खेतों, प्रशिक्षण केंद्रों और उत्पादन इकाइयों में हमारे काम की तस्वीरें। प्रोजेक्ट आगे बढ़ने के साथ नई तस्वीरें जुड़ती रहेंगी।">Photos from our work in villages, farms, training halls and production units. New photos will be added as projects move forward.</p>
       <div class="gal-grid" id="gallery-list">
         <figure><img src="assets/gallery/woman-farmer-paddy-harvest.jpg" alt="Woman farmer smiling with freshly harvested paddy" loading="lazy"></figure>
         <figure><img src="assets/gallery/leaf-plate-making.jpg" alt="Women making leaf plates (dona-pattal)" loading="lazy"></figure>
@@ -423,33 +431,33 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
 
   <section id="testimonials">
     <div class="wrap">
-      <div class="eyebrow">Testimonials</div>
-      <h2>What our clients and communities say</h2>
+      <div class="eyebrow" data-hi-html="अनुभव">Testimonials</div>
+      <h2 data-hi-html="हमारे क्लाइंट और समुदाय क्या कहते हैं">What our clients and communities say</h2>
       <div class="quote-empty">
         <div class="qmark" aria-hidden="true">&ldquo;</div>
-        <p>Feedback from our clients, partners and the communities we work with will be shared here as our projects are completed.</p>
-        <p class="qsub">Worked with us? We would value your feedback. Send it through the form in the Contact section.</p>
+        <p data-hi-html="प्रोजेक्ट पूरे होने के साथ हमारे क्लाइंट, साझेदारों और समुदायों की राय यहाँ साझा की जाएगी।">Feedback from our clients, partners and the communities we work with will be shared here as our projects are completed.</p>
+        <p class="qsub" data-hi-html="हमारे साथ काम किया है? आपकी राय हमारे लिए कीमती है। संपर्क सेक्शन के फ़ॉर्म से भेजें।">Worked with us? We would value your feedback. Send it through the form in the Contact section.</p>
       </div>
     </div>
   </section>
 
   <section id="blog">
     <div class="wrap">
-      <div class="eyebrow">Blog</div>
-      <h2>Notes from the field</h2>
-      <p class="lede">Practical articles on livelihoods, livestock and agri enterprises, DPRs and project management, written from our work on the ground. A new article every month.</p>
+      <div class="eyebrow" data-hi-html="ब्लॉग">Blog</div>
+      <h2 data-hi-html="फ़ील्ड से नोट्स">Notes from the field</h2>
+      <p class="lede" data-hi-html="आजीविका, पशुपालन व कृषि उद्यम, DPR और प्रोजेक्ट प्रबंधन पर व्यावहारिक लेख, ज़मीन पर हमारे काम से लिखे गए। हर महीने एक नया लेख।">Practical articles on livelihoods, livestock and agri enterprises, DPRs and project management, written from our work on the ground. A new article every month.</p>
       <div class="blog-grid" id="blog-list">
         <a class="post post-link" href="blog/project-ends-enterprise-continues.html">
           <span class="pill">31 Oct 2026 · हिंदी | English</span>
           <strong>प्रोजेक्ट खत्म हो जाए, पर उद्यम चलता रहे</strong>
           <em class="post-en">When the project ends, the enterprise should not</em>
-          <span>Why rural enterprises stall when funding ends, and how we build ones that last: feasibility first, ownership, Human Lab training, a Plan B and a gradual exit.</span>
+          <span data-hi-html="फ़ंडिंग खत्म होते ही ग्रामीण उद्यम क्यों रुक जाते हैं, और टिकाऊ उद्यम कैसे बनें: पहले व्यवहार्यता, स्वामित्व, Human Lab प्रशिक्षण, Plan B और धीरे-धीरे बाहर निकलना।">Why rural enterprises stall when funding ends, and how we build ones that last: feasibility first, ownership, Human Lab training, a Plan B and a gradual exit.</span>
           <span class="read">पूरा लेख पढ़ें / Read article →</span>
         </a>
         <article class="post post-soon">
-          <span class="pill">Next article</span>
-          <strong>More field notes coming soon</strong>
-          <span>A new article every month.</span>
+          <span class="pill" data-hi-html="अगला लेख">Next article</span>
+          <strong data-hi-html="और फ़ील्ड नोट्स जल्द">More field notes coming soon</strong>
+          <span data-hi-html="हर महीने एक नया लेख।">A new article every month.</span>
         </article>
       </div>
     </div>
@@ -459,33 +467,33 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
     <div class="wrap story">
       <div class="pearl"><img src="assets/logo-full.webp" alt="Mukta Consultancy logo: People | Knowledge | Impact"></div>
       <div>
-        <div class="eyebrow">About the name</div>
-        <h2>मुक्ता: free, and a pearl</h2>
-        <p>MUKTA (Multi Utility Knowledge &amp; Technical Assistance) is an enterprise consultancy dedicated to rural livelihood systems, grassroots production units, and institutional project design. In Hindi, the name carries two meanings: to be free (<strong>मुक्त</strong>), and a pearl (<strong>मोती</strong>). That is the idea behind the firm: help rural families, especially women, become free to earn on their own terms, and build enterprises with lasting value.</p>
-        <p>The mark shows a pearl held by two leaves, the group and the community around it.</p>
+        <div class="eyebrow" data-hi-html="नाम के बारे में">About the name</div>
+        <h2 data-hi-html="मुक्ता: मुक्त भी, मोती भी">मुक्ता: free, and a pearl</h2>
+        <p data-hi-html="MUKTA (Multi Utility Knowledge &amp;amp; Technical Assistance) एक उद्यम परामर्श संस्था है, जो ग्रामीण आजीविका प्रणालियों, ज़मीनी उत्पादन इकाइयों और संस्थागत प्रोजेक्ट डिज़ाइन के लिए समर्पित है। हिंदी में इस नाम के दो अर्थ हैं: &lt;strong&gt;मुक्त&lt;/strong&gt;, यानी आज़ाद, और &lt;strong&gt;मोती&lt;/strong&gt;। यही इस फ़र्म का विचार है: ग्रामीण परिवार, खासकर महिलाएँ, अपनी शर्तों पर कमाने के लिए आज़ाद हों, और ऐसे उद्यम बनें जिनकी कीमत लंबे समय तक बनी रहे।">MUKTA (Multi Utility Knowledge &amp; Technical Assistance) is an enterprise consultancy dedicated to rural livelihood systems, grassroots production units, and institutional project design. In Hindi, the name carries two meanings: to be free (<strong>मुक्त</strong>), and a pearl (<strong>मोती</strong>). That is the idea behind the firm: help rural families, especially women, become free to earn on their own terms, and build enterprises with lasting value.</p>
+        <p data-hi-html="लोगो में दो पत्तियाँ एक मोती को थामे हुए हैं: समूह और उसके चारों ओर का समुदाय।">The mark shows a pearl held by two leaves, the group and the community around it.</p>
         <div class="team">
-          <span>Our multidisciplinary advisory team brings over 15+ years of combined field expertise across Madhya Pradesh and Chhattisgarh in poultry, agri-allied enterprises, and community-led value chains.</span>
+          <span data-hi-html="हमारी बहु-विषयक सलाहकार टीम के पास मध्य प्रदेश और छत्तीसगढ़ में मुर्गीपालन, कृषि-संबद्ध उद्यमों और समुदाय-आधारित वैल्यू चेन में 15+ वर्षों का संयुक्त फ़ील्ड अनुभव है।">Our multidisciplinary advisory team brings over 15+ years of combined field expertise across Madhya Pradesh and Chhattisgarh in poultry, agri-allied enterprises, and community-led value chains.</span>
         </div>
       
       </div>
     </div>
     <div class="wrap pair">
         <aside class="ledger pair-box" aria-label="What MUKTA stands for">
-          <div class="ledger-head"><span>MUKTA</span><small>what the name stands for</small></div>
+          <div class="ledger-head"><span>MUKTA</span><small data-hi-html="नाम का अर्थ">what the name stands for</small></div>
           <ol>
-            <li><b>M</b><span>Multi<i>Many sectors, one team</i></span></li>
-            <li><b>U</b><span>Utility<i>Work that is useful on the ground</i></span></li>
-            <li><b>K</b><span>Knowledge<i>Training that stays with the group</i></span></li>
-            <li><b>T</b><span>Technical<i>Sound numbers, sound designs</i></span></li>
-            <li><b>A</b><span>Assistance<i>Hand-holding until it runs</i></span></li>
+            <li><b>M</b><span data-hi-html="Multi&lt;i&gt;कई क्षेत्र, एक टीम&lt;/i&gt;">Multi<i>Many sectors, one team</i></span></li>
+            <li><b>U</b><span data-hi-html="Utility&lt;i&gt;ज़मीन पर काम आने वाला काम&lt;/i&gt;">Utility<i>Work that is useful on the ground</i></span></li>
+            <li><b>K</b><span data-hi-html="Knowledge&lt;i&gt;ऐसा प्रशिक्षण जो समूह के पास रह जाए&lt;/i&gt;">Knowledge<i>Training that stays with the group</i></span></li>
+            <li><b>T</b><span data-hi-html="Technical&lt;i&gt;सही आँकड़े, सही डिज़ाइन&lt;/i&gt;">Technical<i>Sound numbers, sound designs</i></span></li>
+            <li><b>A</b><span data-hi-html="Assistance&lt;i&gt;उद्यम चलने तक साथ&lt;/i&gt;">Assistance<i>Hand-holding until it runs</i></span></li>
           </ol>
         </aside>
         <aside class="ledger pair-box" aria-label="What our tagline means">
-          <div class="ledger-head"><span>PEOPLE | KNOWLEDGE | IMPACT</span><small>what our tagline means</small></div>
+          <div class="ledger-head"><span>PEOPLE | KNOWLEDGE | IMPACT</span><small data-hi-html="हमारी टैगलाइन का अर्थ">what our tagline means</small></div>
           <ol class="tag-list">
-            <li><span>People<i>Every project starts and ends with people. We sit with the community, the client and every partner, understand their needs and strengths, and plan around them. Women, farmers, producers and field teams are treated as partners in the work, not just beneficiaries of it.</i></span></li>
-            <li><span>Knowledge<i>We bring technical know-how, sound business systems and practical training to the ground. Groups learn to run production, keep accounts and take decisions on their own. The knowledge stays with them long after our team steps back.</i></span></li>
-            <li><span>Impact<i>We measure success by what changes on the ground: steady income for families, real ownership by members and enterprises that keep running after the project ends. Every result is recorded and reported, so clients and funders can see the difference their support has made.</i></span></li>
+            <li><span data-hi-html="People&lt;i&gt;हर प्रोजेक्ट लोगों से शुरू होता है और लोगों पर पूरा होता है। हम समुदाय, क्लाइंट और हर साझेदार के साथ बैठते हैं, उनकी ज़रूरतें और ताकत समझते हैं, और उसी के अनुसार योजना बनाते हैं। महिलाएँ, किसान, उत्पादक और फ़ील्ड टीमें इस काम में साझेदार हैं, सिर्फ़ लाभार्थी नहीं।&lt;/i&gt;">People<i>Every project starts and ends with people. We sit with the community, the client and every partner, understand their needs and strengths, and plan around them. Women, farmers, producers and field teams are treated as partners in the work, not just beneficiaries of it.</i></span></li>
+            <li><span data-hi-html="Knowledge&lt;i&gt;हम तकनीकी जानकारी, मज़बूत व्यावसायिक प्रणालियाँ और व्यावहारिक प्रशिक्षण ज़मीन तक लाते हैं। समूह खुद उत्पादन चलाना, हिसाब रखना और फ़ैसले लेना सीखते हैं। हमारी टीम के पीछे हटने के बाद भी यह ज्ञान उनके पास रहता है।&lt;/i&gt;">Knowledge<i>We bring technical know-how, sound business systems and practical training to the ground. Groups learn to run production, keep accounts and take decisions on their own. The knowledge stays with them long after our team steps back.</i></span></li>
+            <li><span data-hi-html="Impact&lt;i&gt;हम सफलता को ज़मीन पर आए बदलाव से मापते हैं: परिवारों की स्थायी आय, सदस्यों का असली स्वामित्व, और ऐसे उद्यम जो प्रोजेक्ट खत्म होने के बाद भी चलते रहें। हर नतीजा दर्ज और रिपोर्ट किया जाता है, ताकि क्लाइंट और फ़ंडर देख सकें कि उनके सहयोग से क्या बदला।&lt;/i&gt;">Impact<i>We measure success by what changes on the ground: steady income for families, real ownership by members and enterprises that keep running after the project ends. Every result is recorded and reported, so clients and funders can see the difference their support has made.</i></span></li>
           </ol>
         </aside>
     </div>
@@ -493,40 +501,40 @@ footer .wrap{padding-block:20px;border-top:1px solid rgba(255,255,255,.1);displa
 
   <section id="contact" class="contact">
     <div class="wrap">
-      <div class="eyebrow">Contact</div>
-      <h2>Talk to us about your project</h2>
+      <div class="eyebrow" data-hi-html="संपर्क">Contact</div>
+      <h2 data-hi-html="अपने प्रोजेक्ट के बारे में हमसे बात करें">Talk to us about your project</h2>
       <div class="c-grid">
         <div>
           <div class="c-list">
-            <div class="c-row"><small>Phone</small><span>+91 89621 09900</span><a class="act" href="tel:+918962109900">Call</a></div>
-            <div class="c-row"><small>Email</small><span>muktaconsultancy.india@gmail.com</span><a class="act" href="mailto:muktaconsultancy.india@gmail.com">Email</a></div>
-            <div class="c-row"><small>Location</small><span>Rajnandgaon, Chhattisgarh, India</span><span></span></div>
+            <div class="c-row"><small data-hi-html="फ़ोन">Phone</small><span>+91 89621 09900</span><a class="act" href="tel:+918962109900" data-hi-html="कॉल करें">Call</a></div>
+            <div class="c-row"><small data-hi-html="ईमेल">Email</small><span>muktaconsultancy.india@gmail.com</span><a class="act" href="mailto:muktaconsultancy.india@gmail.com" data-hi-html="ईमेल">Email</a></div>
+            <div class="c-row"><small data-hi-html="स्थान">Location</small><span data-hi-html="राजनांदगांव, छत्तीसगढ़, भारत">Rajnandgaon, Chhattisgarh, India</span><span></span></div>
           </div>
-          <a class="btn primary wa" href="https://wa.me/918962109900" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>Message on WhatsApp</span></a>
-          <div class="social" hidden><small>Follow us</small><div class="soc-row"><a class="soc" href="#" data-social="Facebook" aria-label="Mukta Consultancy on Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg></a><a class="soc" href="#" data-social="Instagram" aria-label="Mukta Consultancy on Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8.1c-.1-1.6-.4-3-1.6-4.2S17.5 2.2 15.9 2.1C14.3 2 9.7 2 8.1 2.1 6.5 2.2 5.1 2.5 3.9 3.7S2.2 6.5 2.1 8.1C2 9.7 2 14.3 2.1 15.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.2.1 7.8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.2 0-7.8zM19.8 18a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4A3.2 3.2 0 0 1 4.8 18c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.2 3.2 0 0 1 6.6 4.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg></a><a class="soc" href="#" data-social="LinkedIn" aria-label="Mukta Consultancy on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></a><a class="soc" href="#" data-social="YouTube" aria-label="Mukta Consultancy on YouTube" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a></div></div>
+          <a class="btn primary wa" href="https://wa.me/918962109900" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span data-hi-html="WhatsApp पर संदेश भेजें">Message on WhatsApp</span></a>
+          <div class="social" hidden><small data-hi-html="हमें फ़ॉलो करें">Follow us</small><div class="soc-row"><a class="soc" href="#" data-social="Facebook" aria-label="Mukta Consultancy on Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></svg></a><a class="soc" href="#" data-social="Instagram" aria-label="Mukta Consultancy on Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21.9 8.1c-.1-1.6-.4-3-1.6-4.2S17.5 2.2 15.9 2.1C14.3 2 9.7 2 8.1 2.1 6.5 2.2 5.1 2.5 3.9 3.7S2.2 6.5 2.1 8.1C2 9.7 2 14.3 2.1 15.9c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.2.1 7.8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.2 0-7.8zM19.8 18a3.2 3.2 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4A3.2 3.2 0 0 1 4.8 18c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.2 3.2 0 0 1 6.6 4.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.2 3.2 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7z"/></svg></a><a class="soc" href="#" data-social="LinkedIn" aria-label="Mukta Consultancy on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></a><a class="soc" href="#" data-social="YouTube" aria-label="Mukta Consultancy on YouTube" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a></div></div>
           <div class="reg" aria-label="Firm">
-            <div><small>Firm</small><span>MUKTA CONSULTANCY — Management &amp; Technical Advisory</span></div>
+            <div><small data-hi-html="फ़र्म">Firm</small><span>MUKTA CONSULTANCY — Management &amp; Technical Advisory</span></div>
           </div>
         </div>
         <form class="enq" id="enq" novalidate>
-          <h3>Raise your query</h3>
-          <p class="enq-sub">Share your details and we will call you back.</p>
+          <h3 data-hi-html="अपना सवाल भेजें">Raise your query</h3>
+          <p class="enq-sub" data-hi-html="अपनी जानकारी दें, हम आपको वापस कॉल करेंगे।">Share your details and we will call you back.</p>
           <div class="f2">
-            <label for="q-name">Name<input id="q-name" name="name" autocomplete="name" required></label>
-            <label for="q-phone">Phone<input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+            <label for="q-name"><span data-hi-html="नाम">Name</span><input id="q-name" name="name" autocomplete="name" required></label>
+            <label for="q-phone"><span data-hi-html="फ़ोन">Phone</span><input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
           </div>
           <div class="f2">
-            <label for="q-email">Email<input id="q-email" name="email" type="email" autocomplete="email"></label>
-            <label for="q-org">Organisation<input id="q-org" name="org" autocomplete="organization"></label>
+            <label for="q-email"><span data-hi-html="ईमेल">Email</span><input id="q-email" name="email" type="email" autocomplete="email"></label>
+            <label for="q-org"><span data-hi-html="संस्था">Organisation</span><input id="q-org" name="org" autocomplete="organization"></label>
           </div>
-          <label for="q-addr">Address / District<input id="q-addr" name="address" autocomplete="street-address"></label>
-          <label for="q-msg">Your query<textarea id="q-msg" name="message" rows="4" required></textarea></label>
-          <p class="enq-err" id="q-err" hidden>Please enter your name, phone number and query.</p>
+          <label for="q-addr"><span data-hi-html="पता / ज़िला">Address / District</span><input id="q-addr" name="address" autocomplete="street-address"></label>
+          <label for="q-msg"><span data-hi-html="आपका सवाल">Your query</span><textarea id="q-msg" name="message" rows="4" required></textarea></label>
+          <p class="enq-err" id="q-err" hidden data-hi-html="कृपया अपना नाम, फ़ोन नंबर और सवाल लिखें।">Please enter your name, phone number and query.</p>
           <div class="enq-actions">
-            <button class="btn wa-btn" type="submit"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>Send on WhatsApp</span></button>
-            <a class="btn ghost-light" id="q-mail" href="mailto:muktaconsultancy.india@gmail.com">Send by email</a>
+            <button class="btn wa-btn" type="submit"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span data-hi-html="WhatsApp पर भेजें">Send on WhatsApp</span></button>
+            <a class="btn ghost-light" id="q-mail" href="mailto:muktaconsultancy.india@gmail.com" data-hi-html="ईमेल से भेजें">Send by email</a>
           </div>
-          <p class="enq-ok" id="q-ok" hidden>Thank you. Your query is ready in WhatsApp. Press send there and we will get back to you.</p>
+          <p class="enq-ok" id="q-ok" hidden data-hi-html="धन्यवाद। आपका सवाल WhatsApp में तैयार है। वहाँ भेजें दबाएँ, हम आपसे संपर्क करेंगे।">Thank you. Your query is ready in WhatsApp. Press send there and we will get back to you.</p>
         </form>
       </div>
     </div>
@@ -567,6 +575,22 @@ function sel(b){var s=b.previousElementSibling;var r=document.createRange();r.se
     document.body.appendChild(a); a.click(); a.remove();
     ok.hidden=false;
   });
+})();
+</script>
+<script>
+(function(){
+  var els=document.querySelectorAll('[data-hi-html]'), btns=document.querySelectorAll('.lang button');
+  els.forEach(function(e){e._en=e.innerHTML});
+  function setLang(l){
+    els.forEach(function(e){e.innerHTML=(l==='hi')?e.getAttribute('data-hi-html'):e._en});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-set')===l))});
+    document.documentElement.lang=l;
+    try{localStorage.setItem('mc-lang',l)}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-set'))})});
+  var q=null;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}
+  var saved=null;try{saved=localStorage.getItem('mc-lang')}catch(e){}
+  setLang(q==='en'||q==='hi'?q:(saved==='hi'?'hi':'en'));
 })();
 </script>
 </body>
